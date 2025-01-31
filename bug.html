@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This is some text.
+  </div>
+  <script>
+    // Attempting to access a non-existent attribute
+    let text = document.getElementById("myDiv").getAttribute("nonExistentAttribute");
+    console.log(text); // Output: null
+
+    // Using getAttribute incorrectly
+    let incorrectAttribute = document.getElementById('myDiv').getAttribute('id');
+    console.log(incorrectAttribute); // Output: myDiv. 
+    //But the expected value is "myDiv" (a string)
+
+    //Incorrect event listener usage
+    document.getElementById('myDiv').addEventListener('click', function(){
+        //Missing a crucial event handling function
+    });
+
+    // Missing closing tags
+    <p>This paragraph is missing a closing tag</p> 
+  </script>
+</body>
+</html>
